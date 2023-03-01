@@ -6,6 +6,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class KoscheiTheDeathless {
+    @Autowired
+    public void setOcean(Ocean1 ocean) {
+        this.ocean = ocean;
+    }
 
     private Ocean1 ocean;
 
@@ -13,8 +17,5 @@ public class KoscheiTheDeathless {
         return "На свете есть океан , " + ocean.toString();
     }
 
-    @Autowired
-    public void setOcean(Ocean1 ocean) {
-        this.ocean = ocean;
-    }
+
 }
